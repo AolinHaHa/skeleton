@@ -1,0 +1,22 @@
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+  <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+    
+    <div class="container">
+      <label><b>Username</b></label>
+      <input matInput type="text" placeholder="Username" name="username" ngModel required>
+
+      <label><b>Password</b></label>
+      <input matInput type="password" placeholder="Password" name="password" ngModel required> 
+
+      <app-twobuttons [button1Text]="'Forget Password'" [button2Text]="'Submit'"></app-twobuttons>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+	<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    
+  </form>
+</div>
+
+
